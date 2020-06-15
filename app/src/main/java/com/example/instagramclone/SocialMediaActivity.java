@@ -1,12 +1,11 @@
 package com.example.instagramclone;
 
+import android.os.Bundle;
+import android.view.Menu;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.viewpager.widget.ViewPager;
-
-import android.os.Bundle;
-import android.view.View;
-import android.view.inputmethod.InputMethodManager;
 
 import com.google.android.material.tabs.TabLayout;
 
@@ -17,6 +16,8 @@ public class SocialMediaActivity extends AppCompatActivity {
     private TabLayout tabLayout;
 
     private TabAdapter tabAdapter;
+
+
 
 
     @Override
@@ -36,6 +37,13 @@ public class SocialMediaActivity extends AppCompatActivity {
         tabLayout = findViewById(R.id.tabLayout);
         tabLayout.setupWithViewPager(viewPager, false);
 
+
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+     
+
+        return super.onCreateOptionsMenu(menu);
+    }
 }
