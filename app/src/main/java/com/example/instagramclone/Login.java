@@ -47,8 +47,8 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
         btnSignUp.setOnClickListener(this);
 
         if (ParseUser.getCurrentUser() != null){
-            ParseUser.getCurrentUser().logOut();
- //           transitionToSocialMediaActivity();
+ //           ParseUser.getCurrentUser().logOut();
+            transitionToSocialMediaActivity();
         }
 
     }
@@ -83,7 +83,9 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
                 break;
             case R.id.btnSignUpLogin:
 
-                finish();
+                Intent intent = new Intent(Login.this, SignUp.class);
+                startActivity(intent);
+//                finish();
                 break;
         }
 
@@ -102,5 +104,6 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
 
         Intent intent = new Intent(Login.this,SocialMediaActivity.class);
         startActivity(intent);
+        finish();
     }
 }

@@ -13,7 +13,6 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.parse.Parse;
 import com.parse.ParseException;
 import com.parse.ParseUser;
 import com.parse.SignUpCallback;
@@ -117,5 +116,6 @@ public class SignUp extends AppCompatActivity implements View.OnClickListener{
 
         Intent intent = new Intent(SignUp.this,SocialMediaActivity.class);
         startActivity(intent);
+        finish();
     }
 }
