@@ -1,7 +1,5 @@
 package com.example.instagramclone;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
@@ -10,6 +8,8 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.parse.LogInCallback;
 import com.parse.ParseException;
@@ -47,8 +47,8 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
         btnSignUp.setOnClickListener(this);
 
         if (ParseUser.getCurrentUser() != null){
- //           ParseUser.getCurrentUser().logOut();
-            transitionToSocialMediaActivity();
+            ParseUser.getCurrentUser().logOut();
+ //           transitionToSocialMediaActivity();
         }
 
     }
